@@ -1,0 +1,66 @@
+.todo-list {
+  min-height: 200px;
+}
+
+.todo-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item-wrapper {
+  animation: fadeIn var(--transition-normal) ease-out both;
+}
+
+.empty-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.empty-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.empty-subtext {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .todo-items {
+    gap: 10px;
+  }
+
+  .empty-list {
+    padding: 40px 16px;
+  }
+
+  .empty-icon {
+    font-size: 2.5rem;
+  }
+
+  .empty-text {
+    font-size: 1rem;
+  }
+
+  .empty-subtext {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,193 @@
+.add-todo-form {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.add-todo-form.expanded {
+  box-shadow: var(--shadow-md);
+}
+
+.quick-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+}
+
+.add-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.quick-input {
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  padding: 8px 0;
+  background: transparent;
+}
+
+.quick-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.quick-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.quick-add-btn {
+  padding: 8px 16px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.quick-add-btn:hover {
+  background: var(--color-primary-dark);
+}
+
+.expanded-form {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid var(--color-border);
+  margin-top: -1px;
+  padding-top: 16px;
+}
+
+.memo-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  resize: vertical;
+  min-height: 60px;
+  font-size: 0.9rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.field-icon {
+  font-size: 0.9rem;
+}
+
+.form-field input,
+.form-field select {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border);
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background: var(--color-background);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}
+
+.cancel-btn:hover {
+  background: var(--color-border);
+  transform: none;
+}
+
+.submit-btn {
+  padding: 10px 24px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit-btn:disabled:hover {
+  transform: none;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .quick-input-row {
+    padding: 14px 16px;
+  }
+
+  .expanded-form {
+    padding: 0 16px 16px;
+    padding-top: 14px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-field {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
